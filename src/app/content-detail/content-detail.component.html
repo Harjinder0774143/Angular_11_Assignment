@@ -1,0 +1,35 @@
+
+<div *ngIf="getGadget" class="container mt-3 gadget-{{getGadget?.id}}">
+    <h1 class="text-center">Book Details</h1>
+    <div class="row"> 
+        <div class="col-sm-4">
+            <div *ngIf="getGadget?.imgURL">
+                <img  [src]="getGadget?.imgURL" width="250px" height="auto">
+            </div>
+            <div *ngIf="!getGadget?.imgURL">
+                <img src="../../assets/img/deafultbook.jpg" width="250px" height="auto">
+            </div>
+        </div>    
+        <div class="col-sm-8">
+            <div elementType="card">
+                <mat-list-item role="listitem">
+                    <p><b>Id:</b> &nbsp;&nbsp;{{getGadget?.id}}</p>
+                </mat-list-item>
+                <mat-list-item>
+                    <p appHoverAffect elementType="name"><b>Name:</b>&nbsp;&nbsp;{{getGadget?.Name}}</p>  
+                </mat-list-item>
+                <mat-list-item>
+                    <p><b >Genre:</b><span appHoverAffect elementType="genre" *ngFor="let list of getGadget?.Genre">&nbsp;&nbsp;{{ list }}</span></p>
+                </mat-list-item>  
+                <mat-list-item>
+                    <p><b >Price:</b> &nbsp;&nbsp; {{getGadget?.Price}}</p>
+                </mat-list-item>
+                           
+            </div>
+        </div>    
+       
+    </div>
+  </div>
+  <div *ngIf="!getGadget">
+    No book details at that id exists. <a routerLink="../">Go back to the book list</a>
+  </div>

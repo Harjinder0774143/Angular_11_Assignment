@@ -1,0 +1,70 @@
+<!-- <div class="formcontainer">
+    <input type="text" id="searchBox"  #topic placeholder="Type movie here">
+    <button (click)="searchAvailability(topic.value)" >Search</button>
+</div>
+<div>
+    <h4 class="enteredValueExist" *ngIf="enteredValueExist">Entered value exists</h4>
+    <h4 class="enteredValueNotExist" *ngIf="enteredValueNotExist">Entered value does not exists</h4>
+</div> -->
+
+
+
+<div class="container">
+    <h1 class="text-center">List of Books</h1>
+    <app-modify-content-component></app-modify-content-component>
+    
+<div>
+  <div style="display: flex; flex-wrap: wrap">
+    <app-movie-card
+      *ngFor="let a of movies; first as isFirstBook; last as isLast"
+      appHoverAffect
+      elementType="card"
+      [firstOrLast]="isFirstBook || isLast"
+      [getGadget]="a"
+    ></app-movie-card>
+  </div>
+</div>
+</div>
+
+
+<!-- <h4>BIOGRAPHY</h4>
+<div style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let a of gadgets | pipelist:genres[0]" style="background-color: gainsboro;">
+        <div [ngClass]="movieCard">
+        <p style="text-align:center;"><b>ID:</b>   {{a.id}}</p>
+        <p style="text-align:center; font-size: 18px; color: blue; "><b style="color:red">TITLE:</b>  {{a.Name}}</p>
+        <img style="margin-left:40px;" [src]="a.imgURL" width="250px" height="250px">
+        <p style="text-align:center;"><b style="color:peru">Genre:</b>  {{a.Genre}}</p>
+        <p style="text-align:center;"><b style="color:peru">PRICE:</b>  {{a.Price}}</p>
+       --<p style="text-align:center;"><b style="color:blue">COLORS:<span *ngFor="let size of a?.tags">{{" "}}{{ size }}</span></b></p>--
+    </div>
+    </div>
+</div>
+
+<h4>MINDSET</h4>
+<div style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let a of gadgets | pipelist:genres[1]" style="background-color: gainsboro;">
+        <div [ngClass]="movieCard">
+        <p style="text-align:center;"><b>ID:</b>   {{a.id}}</p>
+        <p style="text-align:center; font-size: 18px; color: blue; "><b style="color:red">TITLE:</b>  {{a.Name}}</p>
+        <img style="margin-left:40px;" [src]="a.imgURL" width="250px" height="250px">
+        <p style="text-align:center;"><b style="color:peru">Genre:</b>  {{a.Genre}}</p>
+        <p style="text-align:center;"><b style="color:peru">PRICE:</b>  {{a.Price}}</p>
+        --<p style="text-align:center;"><b style="color:blue">COLORS:<span *ngFor="let size of a?.tags">{{" "}}{{ size }}</span></b></p>--
+    </div>
+    </div>
+</div>
+
+<h4>FANTASY</h4>
+<div style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let a of gadgets | pipelist:genres[2]" style="background-color: gainsboro;">
+        <div [ngClass]="movieCard">
+        <p style="text-align:center;"><b>ID:</b>   {{a.id}}</p>
+        <p style="text-align:center; font-size: 18px; color: blue; "><b style="color:red">TITLE:</b>  {{a.Name}}</p>
+        <img style="margin-left:40px;" [src]="a.imgURL" width="250px" height="250px">
+        <p style="text-align:center;"><b style="color:peru">Genre:</b>  {{a.Genre}}</p>
+        <p style="text-align:center;"><b style="color:peru">PRICE:</b>  {{a.Price}}</p>
+        -- <p style="text-align:center;"><b style="color:blue">COLORS:<span *ngFor="let size of a?.tags">{{" "}}{{ size }}</span></b></p> --
+    </div>
+    </div>
+</div> -->

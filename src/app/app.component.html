@@ -1,0 +1,65 @@
+<!-- <div class="container">
+ </div> -->
+<!-- <h2>Single content</h2>
+<input type="text" #text placeholder="Search.." name="search" />
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input type="text" #text matInput placeholder="Search.." name="search" >
+  </mat-form-field>
+  </form> -->
+<!-- <button mat-raised-button color="primary" type="submit" (click)="search(text.value, $event)">Search</button>
+<p style="color: red" *ngIf="error != ''">{{ error }}</p>
+<br /><br /> -->
+<!-- <app-content-card elementType="card" [getGadget]="findElement"></app-content-card> -->
+<!-- <app-modify-content-component></app-modify-content-component>
+<app-content-list></app-content-list> -->
+
+<!-- <h2>App Message</h2>
+<app-app-messages></app-app-messages> -->
+ 
+
+<!-- <div class="side-nav">
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="content" routerLinkActive="active">Movies List</a>
+  <div class="side-nav-child">
+    <a routerLink="content/42" routerLinkActive="active">The answer to the universe and everything</a>
+  </div>
+  <a routerLink="pagewillnotbefound" routerLinkActive="active">Invalid page</a>
+</div>
+<div id="content-wrapper">
+  <router-outlet></router-outlet>
+</div> -->
+<mat-toolbar color="primary" class="example-toolbar">Book App</mat-toolbar>
+<mat-sidenav-container color="primary"  class="example-container">
+  <mat-sidenav class="custom-sidenav" mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <mat-icon >home</mat-icon>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          Home</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-icon >event_note</mat-icon>
+        <a routerLink="list" routerLinkActive="active">Book List</a>
+      </mat-list-item>
+      <div class="side-nav-child">
+        <mat-list-item role="listitem">
+          <mat-icon >event_note</mat-icon>
+          <a routerLink="list/42" routerLinkActive="active">Book InDetail</a>
+        </mat-list-item>
+      </div>
+      <mat-list-item role="listitem">
+        <mat-icon >mood_bad</mat-icon>
+        <a routerLink="pagewillnotbefound" routerLinkActive="active">Invalid page</a>
+      </mat-list-item>
+      <mat-list-item>
+         <mat-icon >mood_good</mat-icon>
+        <a href="https://github.com/Harjinder0774143/Harjinder_Singh_WEB601Assignments_Books" target="_blank" routerLinkActive="active">Github Repo</a>
+      </mat-list-item>
+    </mat-list>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

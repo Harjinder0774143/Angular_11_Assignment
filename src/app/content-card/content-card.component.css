@@ -1,0 +1,37 @@
+
+
+
+.example-full-width{
+    width: 100%;
+  }
+  
+  /* button{
+      padding:10px
+  } */
+
+  #fileUpload {
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.mat-toolbar-single-row {
+    height: auto !important;
+    background: transparent;
+}
+
+.mat-toolbar-single-row button {
+    width: 30%;
+}
+
+.myfilebrowser #filebrowse{
+    font-size: 14px;
+    color: #47525d;
+    margin-left: -16px;
+
+}

@@ -1,0 +1,39 @@
+
+
+.example-container {
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+
+.custom-sidenav{
+    background: #6dc3d1;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-toolbar.mat-primary {
+    background: #25c3cb;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-list-item a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.mat-sidenav-content{
+    background-color: white;
+}
+
+.side-nav-child{
+    margin-left: 12px;
+}
+
+mat-form-field {
+    margin-right: 12px;
+  }

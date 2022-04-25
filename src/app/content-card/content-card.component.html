@@ -1,0 +1,118 @@
+
+<div class="container">    
+    <div class=" p-2 m-2">
+      <div [hidden]="submitted" class="p-2">
+        <h1 class="text-center">Add New Book</h1>
+        <form class="movieForm" (submit)="onSubmit()">
+           <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input type="number" matInput disabled id="id"  min="1" [(ngModel)]="movie_id"  name="id"    />
+          </mat-form-field>
+          
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" matInput  id="name"  [(ngModel)]="movies.Name"
+              name="name"
+              #name="ngModel"
+            />
+          </mat-form-field>
+    
+          <mat-form-field class="example-full-width">
+            <mat-label>Genre</mat-label>
+            <input matInput
+            type="text"
+            id="Genre"
+            [(ngModel)]="movies.Genre"
+            name="Genre"
+          />
+          <span class="small">Enter Genre comma(,) seperated</span>
+          </mat-form-field>
+    
+          <mat-form-field class="example-full-width">
+            <mat-label >Price</mat-label>
+            <input matInput
+              type="text"
+              required="true"
+              
+              id="price"
+              [(ngModel)]="movies.Price"
+              name="price"
+            />
+          </mat-form-field>
+    
+          <!-- <div class="form-group mb-2">
+            <label for="name">Image</label>
+            <input
+              type="file"
+              (change)="onFileChanged($event)"
+              class="form-control"
+              id="name1"
+              required="true"
+              [(ngModel)]="movies.imgURL"
+              name="imgURL"
+            />
+          </div> -->
+          <!-- <mat-form-field class="example-full-width">
+              <div class="myfilebrowser">
+                <mat-toolbar>
+        
+                <input matInput [(ngModel)]="movies.imgURL" readonly name="imgURL" />
+               
+                <button mat-raised-button color="warn">Browse</button>  
+                </mat-toolbar>
+               
+               <input type="file" #UploadFileInput id="fileUpload" (change)="onFileChanged($event)" name="fileUpload"
+                 accept="image/*" />
+            </div>  
+            
+        </mat-form-field> -->
+        <!-- <mat-form-field class="example-full-width">
+          <div class="myfilebrowser">
+            <mat-toolbar>
+              <input id="filebrowse" [(ngModel)]="movies.imgURL"  matInput  />       
+              <button mat-flat-button   color="warn"> Browse </button>
+            </mat-toolbar>       
+            <input type="file" id="fileUpload"  name="fileInput" accept="image/*" multiple (change)="onFileChanged($event)"/>
+          </div>
+        </mat-form-field> -->
+        <mat-form-field  class="example-full-width">
+          <mat-label>Image</mat-label>   
+          <input matInput
+          type="text"
+          id="name1"
+          required="true"
+          [(ngModel)]="movies.imgURL"
+          name="imgURL"
+        />         
+        <!-- <input matInput type="text" class="form-control" formControlName="imageUrl" [(ngModel)]="obj.image" id="imageName"
+         aria-describedby="nameHelp" placeholder="Image name">           -->
+          </mat-form-field>
+        
+        
+          <mat-form-field class="example-full-width">
+            <mat-label>Writer</mat-label>
+            <input
+              type="text"
+              matInput
+              id="writer"
+              required="true"
+              [(ngModel)]="movies.writer"
+              name="writer"
+            />
+          </mat-form-field>
+          <mat-dialog-actions align="end">
+          <button mat-raised-button color="primary">Add Book</button> &nbsp;
+          <button mat-raised-button color="accent" (click)="closeModal()">Cancel</button>
+        </mat-dialog-actions>
+        </form>
+
+       
+        
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $(".genre").select2();
+        });
+      </script>
+    </div> 
+  </div>
